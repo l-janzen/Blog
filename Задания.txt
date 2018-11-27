@@ -1,0 +1,88 @@
+Первое задание я тебе уже рассказала.
+
+Задание 2
+В <header> элемента artikel.html присоединить любой элемент с помощью jquery. Я перевожу дословно, надеюсь ты понимаешь.
+Пример:
+Было:
+	<header>
+		<h1>Это мой блог</h1>
+	</header>
+Стало:
+	<header>
+		<h1>Это мой блог</h1>
+		<div>а это динамически присоединенный элемент</div>
+	</header>
+
+
+Задание 3
+Артикль, который у меня есть в artikel.html должен динамически загружаться из массива articles.
+Нужно взять первый артикль из массива и прицепить его с помощью jQuery в DOM файла articles.html.
+Для этого использовать html-структуру одного из артиклей.
+Пример:
+Было:
+	<main class="col-12 col-md-9">
+	</main>
+Стало:
+	<main class="col-12 col-md-9">
+		<article>
+			<h2>Uberschrift meines ersten Artikels</h2>
+			<p>14. Marz 2018 Uhr von Susi Sommer</p>
+			<p><b>Das ist der Anrisstext zu meinem ersten Artikel</b></p>
+			<p>Das ist der Artikeltext zu meinem ersten Blogartikel, der aus dem
+			Array kommt. Konnte noch viel langer sein....</p>
+			<div>
+				<a class="badge badge-pill badge-primary"
+				href="tagliste.html">Tag1</a>
+				<span class="badge badge-pill badge-primary">Tag2</span>
+			</div>
+ 			<br>
+			<div>
+				<a title="Facebook" href="https://facebook.com/share.php?url=..."
+				target="_blank">Teilen auf Facebook</a> |
+				<a title="Twitter" href="https://twitter.com/intent/tweet?url=..."
+				target="_blank">Twittern</a> |
+				<a href="teilenEmail.html">Teilen via E-Mail</a>
+			</div>
+		</article>
+	</main>
+
+Нужно создать файл blog.js и привязать его в artikel.html. В этом файле будут находиться
+функции javaScript для управления блогом.
+Написать в blog.js функцию
+var createArticle = function(article) {
+...
+};
+которая принимает один артикль и возвращает jQuery-объект. Возвращенный jQuery-объект содержит
+DOM-узел с артиклем(<article>-элемент и все его содержимое).
+
+Теперь нужно заменить код в предыдущем задании в artikel.html на вызов функции createArticle  и 
+последующее прицепление возвращенного значения в DOM.
+
+
+Задание 4
+Прописать data.js and blog.js в index.html. Использовать функцию createArticle, чтобы создать в loop(не знаю, как по русски)
+все артикли в массиве articles и прицепить их в DOM страницы
+
+Задание 5
+Написать в blog.js функцию createSidebar, которая возвращает jQuery-объект, который содержит Markup 
+элемента <aside> и все его содержимое.
+Прописать jQuery, data.js, blog.js во все html-файлы и использовать функцию createSidebar, чтобы создать 
+боковую панель.
+
+Задание 6
+Написать функцию createTagCloud(articles) в файл blog.js, которая принимает массив с артиклями и возвращает
+jQuery-объект, который содержит Tag-Cloud.
+Использовать функцию createTagCloud в функции createSidebar, чтобы показать Tag-Cloud.
+Как подсказка: сначала,чтобы проще было, Tag-Cloud не разных размеров создавать, а просто собрать все
+имеющиеся Tags из всех артиклей.
+
+Задание 7
+artikelNeu.html изменить так, чтобы при нажатии на отправку содержимое формуляра было прочтено с помощью jQuery.
+Из данных формуляра создать артикель-объект и вывести этот объект на консоли.Позже на этом месте объект будет 
+посылаться на сервер.
+Нужно позаботиться, чтобы после выдачи на консоли автоматически показывалась страница index.html
+
+Задание 8
+Изменить artikelNeu.html так, чтобы при загрузке первый артикль из массива articles загружался в формуляр.
+Это можно позже использовать, чтобы обрабатывать уже существующий артикль.
+Новый объект будет послан на этом месте на сервер.
